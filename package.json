@@ -1,0 +1,34 @@
+{
+  "name": "python-novo-projeto",
+  "displayName": "Python: Novo Projeto",
+  "description": "Comando 'Python: Novo Projeto' na paleta do VS Code, no estilo do New Project do C# Dev Kit. Usa uv e os geradores oficiais, sempre na versão mais recente.",
+  "version": "0.1.1",
+  "publisher": "italonicaciodev",
+  "license": "MIT",
+  "author": "ItaloNicacioDev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItaloNicacioDev/python-novo-projeto.git"
+  },
+  "bugs": { "url": "https://github.com/ItaloNicacioDev/python-novo-projeto/issues" },
+  "homepage": "https://github.com/ItaloNicacioDev/python-novo-projeto#readme",
+  "keywords": ["python", "uv", "django", "fastapi", "flask", "template", "scaffold", "new project"],
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "pythonNovoProjeto.criar", "title": "Python: Novo Projeto" }
+    ],
+    "configuration": {
+      "title": "Python: Novo Projeto",
+      "properties": {
+        "pythonNovoProjeto.pastaPadrao": {
+          "type": "string",
+          "default": "",
+          "description": "Pasta onde os projetos são criados. Vazio = perguntar toda vez."
+        }
+      }
+    }
+  }
+}
